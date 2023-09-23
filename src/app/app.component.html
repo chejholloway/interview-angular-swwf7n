@@ -1,0 +1,24 @@
+<div class="main-container">
+  <div class="content-container">
+    <div class="content-area">
+      <h1>Latest Images from Pixabay</h1>
+      <div class="image-container">
+        <div *ngFor="let image of images">
+          <img [src]="image.webformatURL" alt="{{ image.tags }}" />
+        </div>
+      </div>
+    </div>
+
+    <!--  Could Also use this if wanted a generic AppImageList Directive 
+		<div class="content-area">
+			<h1>Latest Images from Pixabay</h1>
+			<div class="image-container" *appImageList="images">
+				<ng-template let-image>
+					<div>
+						<img [src]="image.webformatURL" alt="{{ image.tags }}" />
+					</div>
+				</ng-template>
+			</div>
+		</div>
+		--></div>
+</div>
