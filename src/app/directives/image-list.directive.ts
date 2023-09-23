@@ -6,11 +6,13 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 
+import { Image } from '../types/Image';
+
 @Directive({
   selector: '[appImageList]',
 })
 export class ImageListDirective implements OnInit {
-  @Input() appImageList: any[];
+  @Input() appImageList: Image[];
 
   constructor(
     private templateRef: TemplateRef<any>,
